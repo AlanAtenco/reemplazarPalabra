@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador y Reemplazo de Palabras</title>
+    <link rel="stylesheet" href="./letras.css">
+</head>
+<body>
+
+    <h1>Reemplazo de Palabras</h1>
+
+    <div class="container">
+        <div class="input-group left">
+            <label for="texto">Ingresa un texto:</label>
+            <textarea id="texto" rows="5" placeholder="Escribe el texto aquí..."></textarea>
+        </div>
+        
+        <div class="input-group right">
+            <label for="palabra">Selecciona la palabra que deseas reemplazar:</label>
+            <select id="palabra">
+                <option value="rápido|veloz|ligero">rápido (veloz, ligero)</option>
+                <option value="feliz|contento|alegre">feliz (contento, alegre)</option>
+                <option value="inteligente|listo|sabio">inteligente (listo, sabio)</option>
+                <option value="grande|enorme|gigante">grande (enorme, gigante)</option>
+                <option value="hermoso|bello|precioso">hermoso (bello, precioso)</option>
+                <option value="casa|hogar|vivienda">casa (hogar, vivienda)</option>
+                <option value="auto|coche|vehículo">auto (coche, vehículo)</option>
+                <option value="trabajo|empleo|ocupación">trabajo (empleo, ocupación)</option>
+                <option value="ciudad|urbe|metrópoli">ciudad (urbe, metrópoli)</option>
+                <option value="amigo|compañero|camarada">amigo (compañero, camarada)</option>
+                <option value="dinero|plata|capital">dinero (plata, capital)</option>
+                <option value="camino|ruta|sendero">camino (ruta, sendero)</option>
+                <option value="libro|volumen|tomo">libro (volumen, tomo)</option>
+                <option value="niño|infante|pequeño">niño (infante, pequeño)</option>
+                <option value="fuerte|robusto|vigoroso">fuerte (robusto, vigoroso)</option>
+            </select>
+        </div>
+
+        <div class="input-group search">
+            <label for="buscar">Ingresa la palabra nueva para reemplazar:</label>
+            <input type="search" id="buscar" placeholder="Escribe la nueva palabra aquí...">
+        </div>
+    </div>
+
+    <button onclick="reemplazarPalabra()">Reemplazar Palabra</button>
+
+    <h2 id="resultado" style="display: none;"></h2> <!-- Ocultar inicialmente -->
+
+    <script src="./letras.js"></script>
+
+</body>
+</html>

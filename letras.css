@@ -1,0 +1,166 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    max-width: 850px;
+    padding: 20px;
+    background: rgb(0, 51, 102); /* Color azul oscuro */
+    background: linear-gradient(90deg, rgba(0, 51, 102, 1) 0%, rgba(0, 153, 255, 1) 50%, rgba(0, 204, 255, 1) 100%); /* Degradado más atractivo */
+    color: #ffffff;
+    animation: backgroundAnimation 10s ease infinite;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6); /* Sombra blanca alrededor del título */
+    letter-spacing: 1px;
+    animation: fadeInDown 1s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+label {
+    font-weight: bold; /* Cambiar a negrita */
+    color: #FFDEAD; /* Color más llamativo para los labels */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+}
+
+#texto {
+    width: 100%; /* Ancho completo */
+    padding: 10px;
+    border: 2px solid #1E90FF; /* Color de borde azul brillante */
+    border-radius: 25px; /* Bordes más ondulados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.5); /* Resplandor blanco */
+    font-size: 16px; /* Tamaño de fuente original */
+    background-color: #e0f7fa; /* Color de fondo más suave */
+    transition: all 0.3s ease;
+}
+
+#buscar, #palabra {
+    width: 40%; /* Ancho ajustado */
+    padding: 10px; /* Tamaño original */
+    border: 2px solid #1E90FF; /* Color de borde azul brillante */
+    border-radius: 20px; /* Bordes curvos */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.5); /* Resplandor blanco */
+    font-size: 14px; /* Tamaño de fuente original */
+    transition: all 0.3s ease;
+    background-color: #F0F8FF; /* Color de fondo azul claro */
+}
+
+#buscar:focus, #palabra:focus {
+    border-color: #00BFFF; /* Color de borde al hacer foco */
+    outline: none;
+    transform: scale(1.02);
+    background-color: #B0E0E6; /* Color de fondo al hacer foco */
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    background: rgb(0, 153, 255); /* Color azul vibrante */
+    background: linear-gradient(90deg, rgba(0, 153, 255, 1) 0%, rgba(0, 204, 255, 1) 100%); /* Degradado azul atractivo */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #1E90FF; /* Color al pasar el mouse sobre el botón */
+    transform: translateY(-5px) scale(1.05);
+}
+
+#resultado {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1s ease;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .input-container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    #buscar, #palabra {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+}
